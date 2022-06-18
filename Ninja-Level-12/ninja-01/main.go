@@ -1,9 +1,9 @@
-package starting_code
+package main
 
 import (
 	"fmt"
 
-	"github.com/GoesToEleven/go-programming/code_samples/010-ninja-level-thirteen/01/starting-code/dog"
+	"github.com/yemin7/go-ninja/Ninja-Level-12/ninja-01/dog"
 )
 
 type canine struct {

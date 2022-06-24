@@ -2,20 +2,19 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 	"sync"
 )
 
 func main() {
 	var wg sync.WaitGroup
-	counter := 0
+	var counter int
 	const gr = 20
 
 	wg.Add(gr)
 	for i := 0; i < gr; i++ {
 		go func() {
 			v := counter
-			runtime.Gosched() //yield
+			//runtime.Gosched() //yield
 			v++
 			counter = v
 			fmt.Println("Counter:", counter)

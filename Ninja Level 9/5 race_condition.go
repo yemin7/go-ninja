@@ -7,7 +7,8 @@ import (
 )
 
 var wg sync.WaitGroup
-var mu sync.Mutex
+
+//var mu sync.Mutex
 
 var count int
 
@@ -22,14 +23,14 @@ func main() {
 
 func race_condition(s string) {
 	for i := 0; i < 10; i++ {
-		mu.Lock()
+		//mu.Lock()
 		v := count
 		v++
 		//time.Sleep(3 * time.Millisecond)
 		runtime.Gosched()
 		count = v
 		fmt.Println(s, i, "count: ", count)
-		mu.Unlock()
+		//mu.Unlock()
 	}
 	wg.Done()
 }

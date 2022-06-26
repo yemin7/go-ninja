@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/yemin7/go-ninja/Part-2/maps/datafile"
+	"github.com/yemin7/go-ninja/Part-2/maps/01/datafile"
 )
 
 func main() {

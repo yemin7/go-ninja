@@ -28,7 +28,7 @@ func main() {
 }
 
 func printHashes(s string) {
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 10; i++ {
 		num := strconv.Itoa(i)
 		sum := sha1.Sum([]byte(num))
 		fmt.Printf("%s: %05d: %x\n", s, i, sum)
